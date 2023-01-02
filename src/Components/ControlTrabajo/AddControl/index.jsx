@@ -63,8 +63,8 @@ function AddControlTrabajo() {
                     <h2 className='mt-4'>Registrar servicio</h2>
                 </div>
 
-                <div className='row'>
-                    <div className='col-sm-6 offset-3'>
+                <form className='row'>
+                    <div className='col-sm-6'>
 
                         <div className='mb-3'>
                             <label htmlFor='numerocontrol' className='form-label'>N°</label>
@@ -115,10 +115,11 @@ function AddControlTrabajo() {
                             <label htmlFor='total' className='form-label'>Total</label>
                             <input value={total} onChange={(e) => { setTotal(e.target.value) }} type="text" className='form-control' />
                         </div>
-
-                        <button onClick={agregarControlTrabajo} className='btn btn-success mb-3'>Guardar</button>
+                        <div class="col text-center">
+                            <button onClick={agregarControlTrabajo} className='btn btn-success mb-3'>Guardar</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </>
     )

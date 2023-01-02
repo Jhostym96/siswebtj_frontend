@@ -36,7 +36,7 @@ function AddUser() {
                     'Registo exitoso!',
                     'El usuario fue registrado',
                     'success'
-                  )
+                )
                 navegar('/')
             })
             .then(err => { console.log(err) })
@@ -52,8 +52,9 @@ function AddUser() {
                     <h2 className='mt-4'>Crear un nuevo usuario</h2>
                 </div>
 
-                <div className='row'>
-                    <div className='col-sm-6 offset-3'>
+                <form className='row'>
+                    <div className='col-sm-6'>
+
                         <div className='mb-3'>
                             <label htmlFor='nombre' className='form-label'>Nombre</label>
                             <input value={nombre} onChange={(e) => { setNombre(e.target.value) }} type="text" className='form-control' />
@@ -74,9 +75,11 @@ function AddUser() {
                             <input value={contraseña} onChange={(e) => { setContraseña(e.target.value) }} type="password" className='form-control' />
                         </div>
 
-                        <button onClick={agregarUsuario} className='btn btn-success'>Guardar</button>
+                        <div class="col text-center">
+                            <button onClick={agregarUsuario} className='btn btn-success'>Guardar</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </>
     )
