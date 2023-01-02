@@ -28,27 +28,26 @@ function ListControl() {
             <div className='container'>
 
                 <Link to={"/agregarcontroltrabajo"}><button className='btn btn-success mt-3'>Agregar Servicio</button></Link>
-
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">N° Control</th>
-                            <th scope="col">Fecha</th>
-                            <th scope="col">Cliente</th>
-                            <th scope="col">Almacen</th>
-                            <th scope="col">Maquina</th>
-                            <th scope="col">Operador</th>
-                            <th scope="col">Turno</th>
-                            <th scope="col">Inicio</th>
-                            <th scope="col">Fin</th>
-                            <th scope="col">Total</th>
-                            <th scope="col">Acciones</th>
-
-
-                        </tr>
-                    </thead>
-                    {listacontroltrabajo}
-                </table>
+                <div className='table-responsive'>
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">N° Control</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Almacen</th>
+                                <th scope="col">Maquina</th>
+                                <th scope="col">Operador</th>
+                                <th scope="col">Turno</th>
+                                <th scope="col">Inicio</th>
+                                <th scope="col">Fin</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        {listacontroltrabajo}
+                    </table>
+                </div>
             </div>
         </>
     )

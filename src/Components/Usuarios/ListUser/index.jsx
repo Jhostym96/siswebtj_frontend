@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import SingleUser from '../SingleUser';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
@@ -29,18 +29,20 @@ function ListUser() {
 
                 <Link to={"/agregarusuario"}><button className='btn btn-success mt-3'>Agregar Usuario</button></Link>
 
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Telefono</th>
-                            <th scope="col">Contraseña</th>
-                            <th scope="col">Acciones</th>
-                        </tr>
-                    </thead>
-                    {listausuarios}
-                </table>
+                <div className='table-responsive'>
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Telefono</th>
+                                <th scope="col">Contraseña</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        {listausuarios}
+                    </table>
+                </div>
             </div>
         </>
     )
